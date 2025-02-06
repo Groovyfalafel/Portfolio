@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Font */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('Atop.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Body Styles */
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Container: Updated Dark Background */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a;  /* Dark, not too harsh */
+  animation: fadeIn 1.5s ease forwards;
+  margin-top: 80px; /* Prevent content from being hidden behind fixed header */
+}
+
+/* Header Styles using CSS Grid */
+.header {
+  display: grid;
+  grid-template-columns: auto auto auto; /* Three columns: left, center, right */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Left Column: Logo */
+.header-left {
+  grid-column: 1;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2em;
+  color: white;
+}
+
+/* Center Column: Navigation */
+.nav-center {
+  grid-column: 2;
+  text-align: center;
+}
+
+.navbar ul {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.1);
+}
+
+/* Right Column: Social Icons */
+.header-right {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons ul li {
+  margin-left: 30px;
+}
+
+/* Icon Styles */
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* .me Box: White Background with Orange Text */
+.me {
+  display: flex;
+  width: 1300px;
+  height: 600px;
+  color: orange;  /* Text in the box changed to orange */
+  text-align: center;
+  background-color: white;  /* Box background changed to white */
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.18);  /* Adjusted border for contrast */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* Left Section in .me Box */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Right Section in .me Box */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  text-align: right;
+}
+
+.right p {
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+.me p {
+  font-size: 2.8em;
+  text-align: right;
+}
+
+/* Resume Button (Unchanged) */
+.resume-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 4em;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+}
+
+.resume-button:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+
+/* Typewriter Effect */
+#typed {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+/* Blinking Cursor */
+#cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: rgb(0, 0, 0);
+  margin-left: 2px;
+  animation: blinkCursor 0.7s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Tech Stack Section: Updated Background and Heading */
+#stack {
+  padding: 2rem;
+  text-align: center;
+  background-color: #1a1a1a;  /* Matching the overall dark vibe */
+}
+
+#stack h2 {
+  margin-bottom: 1.5rem;
+  font-size: 3em;
+  color: white;  /* Heading text set to white for contrast */
+}
+
+/* New styling for the Tech Stack paragraph */
+#stack p {
+  color: orange;
+  font-size: 4em;
+  margin-bottom: 1.5rem;
+}
+
+.stack-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Set size for all tech stack images except the Node.js one */
+.stack-icons img {
+  width: 300px;
+  height: auto;
+}
+
+/* (Optional) Hover effect for tech stack images */
+.stack-icons img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+/* Projects Section */
+#projects {
+  padding: 2rem;
+  text-align: center;
+  background: transparent; /* Ensures the full-page gradient shows through */
+  background-color: #1a1a1a;
+}
+
+#projects h2 {
+  font-size: 3em;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay that appears on hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}

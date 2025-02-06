@@ -1,0 +1,144 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anas Mohammad</title>
+  <link rel="icon" href="" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O/jJ6zEk5jG1R6E0KXWQ1Y5Y/2bI6X5K6e5I+3/hV9XhWkR8b7d45EGA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <!-- Left Column: Logo -->
+    <div class="header-left">
+      <div class="logo">
+        <h1>Anas Mohammad</h1>
+      </div>
+    </div>
+
+    <!-- Center Column: Navigation Links -->
+    <div class="nav-center">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Right Column: Social Icons -->
+    <div class="header-right">
+      <div class="social-icons">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/anas-mohammad-3264572b9/" title="LinkedIn" target="_blank">
+              <img class="icon" src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/anhejjawi/?next=%2F" title="Instagram" target="_blank">
+              <img class="icon" src="images/social-media.png" alt="Instagram Icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Groovyfalafel" title="GitHub" target="_blank">
+              <img class="icon" src="images/github.png" alt="GitHub Icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="me">
+      <div class="left">
+        <img src="images/Selfie.png" alt="Descriptive alt text">
+      </div>
+      <div class="right">
+        <p>
+          Hello, my name is Anas Mohammad, I study computer science at the University Of Windsor. I'm an aspiring Software Developer/Data Analyst,
+          <span id="typed"></span><span id="cursor"></span>
+        </p>
+      </div>
+    </div>
+
+    <a class="resume-button" href="https://github.com/Groovyfalafel/Resume/blob/main/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+
+  <section id="stack">
+    <h2>My Tech Stack</h2>
+    <div class="stack-icons">
+      <!-- HTML Icon -->
+      <img src="images/html.png" alt="HTML Icon" title="HTML">
+      <!-- CSS Icon -->
+      <img src="images/css.png" alt="CSS Icon" title="CSS">
+      <!-- JavaScript Icon -->
+      <img src="images/js.png" alt="JavaScript Icon" title="JavaScript">
+      <!-- React Icon -->
+      <img src="images/physics.png" alt="React Icon" title="React">
+      <!-- MongoDB Icon -->
+      <img src="images/mongodb-original.svg" alt="MongoDB Icon" title="MongoDB">
+      <!-- Node.js Icon (kept at original size) -->
+      <img class="nodejs" src="images/nodejs.svg" alt="Node.js Icon" title="Node.js">
+      <!-- C Icon -->
+      <img src="images/c.png" alt="C Icon" title="C">
+      <!-- Java Icon -->
+      <img src="images/java.png" alt="Java Icon" title="Java">
+    </div>
+    <p>This is my tech stack, I've made a few projects with these, some of these projects can be viewed on my GitHub!</p>
+  </section>
+  <section id="projects">
+    <h2>Projects:</h2>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <a href="https://example.com/project1" class="project-card">
+        <img src="images/project1.jpg" alt="Project 1">
+        <div class="overlay">
+          <p>Example Project 1: A brief description goes here.</p>
+        </div>
+      </a>
+      <!-- Project Card 2 -->
+      <a href="https://example.com/project2" class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="overlay">
+          <p>Example Project 2: A brief description goes here.</p>
+        </div>
+      </a>
+      <!-- Project Card 3 -->
+      <a href="https://example.com/project3" class="project-card">
+        <img src="images/project3.jpg" alt="Project 3">
+        <div class="overlay">
+          <p>Example Project 3: A brief description goes here.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const typedElement = document.getElementById("typed");
+      // Include a leading space if needed.
+      const finalText = " check out my resume down below!";
+      let index = 0;
+      const speed = 70; // Milliseconds per character
+
+      function typeCharacter() {
+        if (index < finalText.length) {
+          typedElement.textContent += finalText.charAt(index);
+          index++;
+          setTimeout(typeCharacter, speed);
+        }
+      }
+      
+      typeCharacter();
+    });
+  </script>
+</body>
+</html>
